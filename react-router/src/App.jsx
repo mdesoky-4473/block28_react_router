@@ -1,30 +1,21 @@
 import { useState } from 'react'
-import { Routes, Route, Link} from 'react-router-dom'
 import './App.css'
-import Blue from './components/Blue.jsx'
-import Red from './components/Red.jsx'
-import Home from './components/Home.jsx'
+import Navbar from './components/Nav'
+import MainSection from './components/MainSection'
+import Footer from './components/Footer'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
+  // const [count, setCount] = useState(0)
 
   return (
+
     <div id="container">
-      {/* <h1>Hello React Router!</h1> */}
-      <div id="navbar">
-        <Link to="/blue">Blue</Link> | 
-        <Link to="/red">Red</Link>
-      </div>
       
-      <div id="main-section">
+      <Navbar />
+      <MainSection />
+      <Footer />
 
-        <Routes>
-          <Route path="/blue" element={<Blue />} />
-          <Route path="/red" element={<Red />} />   
-          <Route path="/" element={<Home />} /> 
-        </Routes>
-
-      </div>
     </div>
     
   );

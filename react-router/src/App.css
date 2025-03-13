@@ -1,42 +1,131 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
   padding: 2rem;
+  background: white; /* White content area */
+  border-radius: 10px; /* Smooth rounded corners */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+#container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+#container > div {
+  display: flex;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+#navbar {
+  padding: 2em;
+  justify-content: space-evenly;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#main-section {
+  flex-grow: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+#main-section > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.red {
+  background-color: #b05f6d;
+  color: white;
+}
+.blue {
+  background-color: #275db3;
+  color: white;
+}
+
+.home {
+  background-color: forestgreen;
+  color: white;
+}
+
+.red, .blue, .home {
+  height: 100vh; /* Ensures full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.Koala {
+  background-color: lightgray;  
+  color: black;
+  text-align: center;
+  padding: 20px;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Koala img {
+  width: 300px; /* Adjust size */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.footer {
+  background-color: white;
+  text-align: center;
+  padding: 10px;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  color: navy;
+}
+
+#navbar {
+  background-color: #333; /* Dark navbar */
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+#navbar a:hover {
+  color: yellow; /* Highlight effect */
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+
+/* @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
+} */
 
-.card {
+/* .card {
   padding: 2em;
-}
+} */
 
-.read-the-docs {
+/* .read-the-docs {
   color: #888;
-}
+} */
